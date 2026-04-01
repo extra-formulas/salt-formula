@@ -14,8 +14,8 @@
 
 Oracle Linux Server-7:
   pkgrepo_humanname: SaltStack repo for RHEL/CentOS {{ osmajorrelease }}
-  pkgrepo: '{{ salt_repo }}/saltproject-rpm/'
-  key_url: '{{ salt_repo_key_url }}'
+  pkgrepo: '{{ salt_repo }}/{{ py_ver_repr or 'yum' }}/redhat/{{ osmajorrelease }}/$basearch/{{ salt_release }}'
+  key_url: '{{ salt_repo }}/{{ py_ver_repr or 'yum' }}/redhat/{{ osmajorrelease }}/$basearch/{{ salt_release }}/SALTSTACK-GPG-KEY.pub'
 
 Red Hat Enterprise Linux-9:
   key_url: '{{ salt_repo }}/{{ py_ver_repr or 'yum' }}/redhat/$releasever/$basearch/{{ salt_release }}/SALTSTACK-GPG-KEY2.pub'
