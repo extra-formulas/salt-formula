@@ -15,4 +15,4 @@ Oracle Linux Server-7:
   key_url: '{{ salt_repo_key_url }}'
 
 Red Hat Enterprise Linux-9:
-  key_url: '{{ salt_repo }}/{{ py_ver_repr or "yum" }}/redhat/$releasever/$basearch/{{ salt_release }}/SALTSTACK-GPG-KEY2.pub'
+  key_url: '{{ salt_repo }}/{{ py_ver_repr or 'yum' }}/redhat/$releasever/$basearch/{{ salt_release }}/SALTSTACK-GPG-KEY2.pub'
